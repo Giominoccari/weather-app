@@ -10,6 +10,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+    java
 }
 
 repositories {
@@ -19,6 +20,7 @@ repositories {
 
 dependencies {
     // This dependency is used by the application.
+    implementation("org.apache.httpcomponents:httpclient:4.5.13")
     implementation("com.google.guava:guava:31.0.1-jre")
 }
 
@@ -34,5 +36,5 @@ testing {
 
 application {
     // Define the main class for the application.
-    mainClass.set("weather.app.App")
+    mainClass.set("weather.app.Main")
 }
